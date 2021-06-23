@@ -1,0 +1,21 @@
+# the spec lisp file is generated from .spec
+c2ffi-spec/*.lisp
+
+# ignore node_modules and __pycache__
+/script/js/node_modules/
+/script/py/__pycache__/
+
+# lisp junk
+*.FASL
+*.fasl
+*.lisp-temp
+*.lx??fsl
+
+# emacs temp files
+*~
+\#*#
+.#*
+
+# other editors
+*.swp
+*.bak

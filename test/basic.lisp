@@ -1,0 +1,21 @@
+(in-package :metacall/test)
+
+(in-suite test/basic)
+
+(deftest test/basic/node-sum ()
+  (declare (optimize (debug 3)))
+  (init)
+  (load-script "node" "sum.js")
+  (multiple-value-bind (val type) (%call "sum" 40 2)
+    (is (eql 'metacall-double type))
+    (is (eql 42.0d0 (metacall-value-to-double val)))
+    (metacall-value-destroy val)))
+
+(deftest test/basic/py-test ()
+  (declare (optimize (debug 3)))
+  (init)
+  (load-script "py" "test.py")
+  (multiple-value-bind (val type) (%call "py_test")
+    (is (eql 'metacall-string type))
+    (is (eql "Python hello_world: test" (metacall-value-to-string val)))
+    (metacall-value-destroy val)))

@@ -1,0 +1,12 @@
+* MetaCall Common Lisp library
+
+A Common Lisp [[https://en.wikipedia.org/wiki/Foreign_function_interface][foreign function interface (FFI)]] for [[https://metacall.io/][MetaCall]], which is
+an extensible, embeddable and interoperable cross-platform polyglot
+runtime. It supports NodeJS, Vanilla JavaScript, TypeScript, Python,
+Ruby, C#, Go, C, C++, Rust, D, Cobol and more.
+
+It uses [[https://github.com/cffi/cffi][CFFI/C2FFI]] to automatically generate the CFFI definitions, so it's a
+complete interface based on the C header files.
+
+*NOTE: this software is in pre-alpha state. You are better off NOT
+using it, but to wait for a more stable version!*
